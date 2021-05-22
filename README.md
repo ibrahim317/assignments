@@ -1,3 +1,4 @@
+[![Himnadram](assets/himnadram-dark.jpg)](https://bit.ly/himnadram_donate)
 # CopyFilesProjects
 this program is a copy files project that can copy any type of files easily.
 
