@@ -13,7 +13,7 @@ int main()
     infile.open(spath);
     if (infile.fail())
     {
-        cout << "can`t find the file in the path that you intered please cheak the name";
+        cout << "can't find the file in the path that you intered please cheak the name";
         exit(1);
     }
     cout << "inter the target file path :";
