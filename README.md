@@ -1,4 +1,3 @@
-[![Himnadram](assets/himnadram-dark.jpg)]
 # CopyFilesProjects
 this program is a copy files project that can copy any type of files easily.
 
