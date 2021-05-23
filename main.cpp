@@ -1,32 +1,40 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "header.h"
 using namespace std;
+
 int main()
 {
     ifstream infile;
     ofstream outfile;
     string spath;
     string tpath;
-    cout << "inter the source file path strat from the root /: ";
-    cin >> spath;
-    infile.open(spath);
-    while (infile.fail())
+    list();
+    while (x != 3)
     {
-        cout << "can't find the file in the path that you intered please cheak the name\n";
-        cout << "inter the source file path strat from the root /: ";
-        cin >> spath;
-        infile.open(spath);
+        if (x == 1)
+        {
+            line();
+            openFiles();
+            encrypt();
+            cout << "\n\n\t\t\t#Encryption is Done Succefully#";
+            list();
+        }
+        if (x == 2)
+        {
+            line();
+            openFiles();
+            decrypt();
+            cout << "\n\n\t\t\t#Decryption is Done Succefully#";
+            list();
+        }
+        if (x != 3 && (x != 2 && x != 1))
+        {
+            cout << "You have entered an invalid value,Enter your choose :  ";
+            cin >> x;
+        }
     }
-    cout << "inter the target file path (strat from the root /): ";
-    cin >> tpath;
-    outfile.open(tpath);
 
-    string contant;
-    for (int i = 0; infile.eof() != true; i++)
-    {
-        contant += infile.get();
-    }
-    outfile << contant;
     return 0;
 }
