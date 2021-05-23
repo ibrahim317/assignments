@@ -11,10 +11,12 @@ int main()
     cout << "inter the source file path strat from the root /: ";
     cin >> spath;
     infile.open(spath);
-    if (infile.fail())
+    while (infile.fail())
     {
-        cout << "can't find the file in the path that you intered please cheak the name";
-        exit(1);
+        cout << "can't find the file in the path that you intered please cheak the name\n";
+        cout << "inter the source file path strat from the root /: ";
+        cin >> spath;
+        infile.open(spath);
     }
     cout << "inter the target file path (strat from the root /): ";
     cin >> tpath;
