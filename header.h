@@ -33,6 +33,8 @@ void decrypt()
         contant += infile.get() - '*';
     }
     outfile << contant;
+    outfile.close();
+    infile.close();
 }
 void encrypt()
 {
@@ -42,13 +44,17 @@ void encrypt()
         contant += infile.get() + '*';
     }
     outfile << contant;
+    outfile.close();
+    infile.close();
 }
 void openError()
 {
     while (infile.fail())
     {
-        cout << "can't find the file in the path that you intered please cheak the name";
-        cout << "\n inter the path of the file that you want to encrypt : ";
+        line();
+        cout << "\n can't find the file in the path that you entered please cheak the name \n";
+        line();
+        cout << "\n inter the path of the file that you want to work with : ";
         cin >> spath;
         infile.open(spath);
     }
@@ -59,6 +65,7 @@ void openFiles()
     cin >> spath;
     infile.open(spath);
     openError();
+    line();
     cout << "\n inter the path of the target file : ";
     cin >> tpath;
     outfile.open(tpath);
